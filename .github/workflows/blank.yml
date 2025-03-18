@@ -17,4 +17,17 @@ jobs:
           java-version: '17'
           cache: 'maven'  # Caches Maven dependencies for faster builds
 
+            steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Check Default JDK Version
+        run: java -version
+
+      - name: Check javac Version
+        run: javac -version
+
+      - name: Verify JAVA_HOME
+        run: echo $JAVA_HOME
+
   
